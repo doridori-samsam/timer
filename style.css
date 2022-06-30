@@ -1,0 +1,160 @@
+* { 
+font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+    background: radial-gradient(96.74% 276.79% at 3.59% 5.28%, #F0F4FF 0%, #A5B6EE 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main{
+    margin-top: 72px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+}
+
+h1.logo{
+    background:url('images/weniv-logo.svg') no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 244px;
+    height: 48px;
+    text-indent: -999px;
+}
+
+article{
+    width: 400px;
+    height: 360px;
+    background: linear-gradient(144.07deg, #5572BB 2.13%, #374B7C 102.97%);
+    border-radius: 16px;
+    box-shadow: 20px 20px 60px 10px rgba(55, 75, 124, 0.4);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.display{
+    margin-top: 32px;
+    width: fit-content;
+    color: #ffffff;
+}
+
+.display .hour, .minute, .second{
+    display: inline-block;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 700;
+    color: #A5B6EE;
+}
+
+.btn-wrapper{
+    /* border:1px solid red; */
+    width:fit-content;
+    margin-top: 40px;
+}
+
+button{
+    width: 115px;
+    height: 48px;
+    vertical-align: bottom;
+}
+
+button.start{
+    background: url('images/start-disabled.png') no-repeat;
+    margin-right: 12px;
+}
+
+button.start.abled{
+    background: url('images/start-default.png') no-repeat;
+}
+
+button.start:hover{
+    background: url('images/start-default.png') no-repeat;
+}
+
+button.reset{
+    background: url('images/reset-disabled.png') no-repeat;
+}
+
+button.reset.abled{
+    background: url('images/reset-default.png') no-repeat;
+}
+
+
+
+.display .box{
+    /* border: 1px solid yellow; */
+    width: 80px;
+    height: 80px;
+    background: url('images/Rectangle1.png') no-repeat;
+    margin-top: 4px;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 80px;
+    color: #ffffff;
+}
+
+.hour, .minute{
+    margin-right: 22px;
+}
+
+div.minute::before{
+    content: ':';
+    /* width: 6px;
+    height: 6px;
+    border-radius: 50%; */
+    display: inline-block;
+    position: absolute;
+    margin-top: 30px;
+    margin-left: -48px;
+    font-size: 40px;
+    font-weight: 500;
+    color: #8198D0;
+}
+
+
+div.minute::after{
+    content: ':';
+    display: inline-block;
+    position: absolute;
+    margin-top: -66px;
+    margin-left: 48px;
+    font-size: 40px;
+    font-weight: 500;
+    color: #8198D0;
+}
+
+
+h2.title{
+    margin-top: 48px;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    color: #ffffff;
+}
+
+.title::after{
+    content: '';
+    display:block;
+    margin-top: 23px;
+    width: 312px;
+    height: 1px;
+    background-color: #3d538a;
+}
+
+footer{
+    margin-top: 60px;
+    text-align: center;
+    color: #8596BF;
+    font-size: 14px;
+    font-weight: 400;
+}
