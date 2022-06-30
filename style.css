@@ -48,13 +48,6 @@ div.display{
     color: #ffffff;
 }
 
-.display .hour, .minute, .second{
-    display: inline-block;
-    text-align: center;
-    font-size: 12px;
-    font-weight: 700;
-    color: #A5B6EE;
-}
 
 .btn-wrapper{
     /* border:1px solid red; */
@@ -77,8 +70,8 @@ button.start.abled{
     background: url('images/start-default.png') no-repeat;
 }
 
-button.start:hover{
-    background: url('images/start-default.png') no-repeat;
+button.start.abled:hover{
+    opacity: 0.8;
 }
 
 button.reset{
@@ -89,10 +82,19 @@ button.reset.abled{
     background: url('images/reset-default.png') no-repeat;
 }
 
+button.reset.abled:hover{
+    opacity: 0.8;
+}
 
+button.pause{
+    background: url('images/pause.png') no-repeat;
+}
 
+button.pause:hover{
+    opacity: 0.8;
+}
 .display .box{
-    /* border: 1px solid yellow; */
+    display: block;
     width: 80px;
     height: 80px;
     background: url('images/Rectangle1.png') no-repeat;
@@ -103,15 +105,25 @@ button.reset.abled{
     color: #ffffff;
 }
 
+.display .box:hover{
+    opacity: 0.7;
+    cursor:pointer;
+}
+
+.display .hour, .minute, .second{
+    display: inline-block;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 700;
+    color: #A5B6EE;
+}
+
 .hour, .minute{
     margin-right: 22px;
 }
 
 div.minute::before{
     content: ':';
-    /* width: 6px;
-    height: 6px;
-    border-radius: 50%; */
     display: inline-block;
     position: absolute;
     margin-top: 30px;

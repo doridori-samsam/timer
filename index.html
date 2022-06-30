@@ -4,10 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script
-    src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-    crossorigin="anonymous"></script>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
     <title>weniv 타이머</title>
@@ -19,18 +15,18 @@
             <h2 class="title">TIMER</h2>
             <div class="display">
             <div class="hour">HRS
-                <div class="hrs box">00</div>
+                <button class="hrs box">00</button>
             </div>
             <div class="minute">MIN
-                <div class="min box">00</div>
+                <button class="min box">00</button>
             </div>
             <div class="second">SEC
-                <div class="sec box">00</div>
+                <button class="sec box">00</button>
             </div>
             </div>
             <div class="btn-wrapper">
-            <button class="start"></button>
-            <button class="reset"></button>
+            <button class="start" disabled></button>
+            <button class="reset" disabled></button>
             </div>
     </article>
     </main>
