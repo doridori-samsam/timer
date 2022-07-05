@@ -30,34 +30,44 @@ for(let i=0; i<timeBox.length; i++){
 /* 타이머 구동 */
 let isOn = false;
 
-function countDown() {
+function second(){
   if(isOn){
-  for(let i=0; i<timeBox.length-2; i++){
-    console.log(timeBox[2].textContent);
-    if(timeBox[2].textContent > 0){
-      console.log('초 줄어듦...');
-      if(timeBox[2].textContent <= 10){
+    if(timeBox[0].textContent > 0 || timeBox[1].textContent >= 0 ){
+      if(timeBox[2].textContent === '00'){
+        timeBox[2].textContent = 59;
+        if(timeBox[1].textContent > 0 && timeBox[1].textContent <= 10){
+          timeBox[1].textContent = '0' + parseInt(parseInt(timeBox[1].textContent)-1);
+        }
+        else if(timeBox[1].textContent>10){
+          timeBox[1].textContent = parseInt(timeBox[1].textContent)-1;
+        }
+        else if(timeBox[0].textContent > 0 && timeBox[1].textContent === '00'){
+          timeBox[1].textContent = 59;
+          if(timeBox[0].textContent <= 10){
+            timeBox[0].textContent = '0' + parseInt(parseInt(timeBox[0].textContent)-1);
+          }
+          else{timeBox[0].textContent = parseInt(timeBox[0].textContent)-1;
+          }
+        }
+        else if(timeBox[0].textContent === '00' && timeBox[1].textContent === '00'){
+          clearInterval(interval);
+          timeBox[2].textContent = '00';
+          resetBtn.classList.remove('pause');
+          resetBtn.classList.add('reset');
+          resetBtn.disabled = true;
+          isOn = false;
+          alert('Time is up!');
+        }
+      }
+      else if(timeBox[2].textContent > 0 && timeBox[2].textContent <= 10){
         timeBox[2].textContent = '0' + parseInt(parseInt(timeBox[2].textContent)-1);
       }
       else{timeBox[2].textContent = parseInt(timeBox[2].textContent)-1;
       }
     }
-    else if(timeBox[2].textContent === '00'){
-      if(parseInt(timeBox[1].textContent) === 0){
-        isOn = false;
-        clearInterval(interval);
-        console.log(isOn);
-      }
-      else if(timeBox[1].textContent <= 10){
-        timeBox[1].textContent = '0' + parseInt(parseInt(timeBox[1].textContent)-1);}
-        else if(timeBox[1].textContent > 10){
-          timeBox[1].textContent = parseInt(parseInt(timeBox[1].textContent)-1);}
-      
-          timeBox[2].textContent = 59;
-    }
   }
-  }
-};
+}
+
 
 let interval;
 
@@ -78,7 +88,7 @@ resetBtn.addEventListener('click', ()=>{
       startBtn.classList.remove('abled');
   } else if(resetBtn.classList[0] === 'pause'){
       clearInterval(interval);
-      isOn = null;
+      isOn = false;
       console.log(isOn);
       startBtn.disabled = false;
       startBtn.classList.add('abled');
@@ -90,13 +100,10 @@ resetBtn.addEventListener('click', ()=>{
 
 
 startBtn.addEventListener('click', ()=>{
-  if(isOn === null){
     isOn = true;
     console.log(isOn);
-    interval = setInterval(countDown, 300);
-  }
-  isOn = true;
-  interval = setInterval(countDown, 300);
+    interval = setInterval(second, 1000);
+  
   resetBtn.classList.remove('reset');
   resetBtn.classList.add('pause');
   resetBtn.classList.remove('abled');
