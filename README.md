@@ -3,8 +3,9 @@
 [Timer 페이지로 이동](https://doridori-samsam.github.io/Just-do-list/)
 
 <br>
-<img src="https://media.discordapp.net/attachments/698529846565011531/1032364488160190614/unknown.png?width=536&height=580">
+<img src="https://media.discordapp.net/attachments/698529846565011531/1032364488160190614/unknown.png?width=536&height=580" width="500" height="500">
 
+<br>
 ## ✨Introduction
 
 Vanila Javascript로 구현한 타이머 입니다.<br/>
