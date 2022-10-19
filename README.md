@@ -1,6 +1,6 @@
 # timer
 
-[Timer 페이지로 이동](https://doridori-samsam.github.io/Just-do-list/)
+[Timer 페이지로 이동](https://doridori-samsam.github.io/timer/)
 
 <br>
 
