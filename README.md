@@ -3,7 +3,9 @@
 [Timer 페이지로 이동](https://doridori-samsam.github.io/Just-do-list/)
 
 <br>
-<img src="https://media.discordapp.net/attachments/698529846565011531/1032364488160190614/unknown.png?width=536&height=580" width="500" height="500">
+<div align="center>
+<img src="https://media.discordapp.net/attachments/698529846565011531/1032364488160190614/unknown.png?width=536&height=580" width="300" height="300">
+</div>
 
 <br>
 ## ✨Introduction
